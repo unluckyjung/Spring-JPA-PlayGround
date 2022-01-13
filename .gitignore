@@ -156,3 +156,8 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,gradle,java
+play-ground/src/main/.DS_Store
+
+play-ground/src/.DS_Store
+
+play-ground/.DS_Store
