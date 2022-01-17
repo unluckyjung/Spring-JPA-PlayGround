@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,16 +17,14 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
+    @NotNull
+//    @Column(nullable = false)
     private String name;
 
     public Member(final String name) {
-        this(null, name);
-    }
-
-    public Member(final Long id, final String name) {
-        this.id = id;
         this.name = name;
     }
 }

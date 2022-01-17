@@ -15,7 +15,8 @@ class MemberTest {
 
     @Test
     void nameTest() {
-        Member member = new Member("jys");
+//        Member member = new Member("jys");
+        Member member = new Member(null);
         Member savedMember = memberRepository.save(member);
         assertThat(member.getName()).isEqualTo(savedMember.getName());
     }

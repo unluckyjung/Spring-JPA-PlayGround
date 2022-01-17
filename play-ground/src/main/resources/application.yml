@@ -13,6 +13,8 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
+        validator:
+          apply_to_ddl: false
         format_sql: true
 #        show-sql: true
 
