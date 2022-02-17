@@ -1,0 +1,11 @@
+### GET hello webflux
+GET http://localhost:8080/annotation/hello
+
+### GET hello yoonsung
+GET http://localhost:8080/annotation/hello/yoonsung
+
+### POST hello unluckyjung by DTO
+POST http://localhost:8080/annotation/hello
+Content-Type: application/json
+
+< ./member.json
