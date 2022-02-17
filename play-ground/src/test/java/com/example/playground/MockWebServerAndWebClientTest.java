@@ -6,6 +6,7 @@ import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -14,9 +15,11 @@ import java.io.IOException;
 
 
 @Slf4j
+@SpringBootTest
+public
 class MockWebServerAndWebClientTest {
 
-    public static MockWebServer mockWebServer;
+    protected static MockWebServer mockWebServer;
 
     @BeforeAll
     static void setUp() throws IOException {

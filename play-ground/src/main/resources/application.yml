@@ -2,7 +2,6 @@ spring:
   datasource:
     url: jdbc:h2:~/test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
-
   h2:
     console:
       enabled: true
@@ -20,3 +19,6 @@ logging.level:
   org.hibernate.SQL: debug
 #  org.hibernate.SQL: trace
 #  org.hibernate.type: trace
+
+mock-webserver:
+  port: 9999
