@@ -1,4 +1,4 @@
-package com.example.playground.repository;
+package com.example.playground.domain.repository;
 
 import com.example.playground.domain.Member;
 import org.junit.jupiter.api.Test;
