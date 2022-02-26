@@ -1,6 +1,7 @@
 package com.example.playground.domain;
 
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -22,5 +23,23 @@ public class Member {
 
     public Member(final String name) {
         this.name = name;
+    }
+
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    public static class Request {
+        private String name;
+    }
+
+    @Getter
+    @AllArgsConstructor(access = AccessLevel.PRIVATE)
+    public static class Response {
+        private Long id;
+        private String name;
+
+        public static Response from(final Member member) {
+            return new Response(member.getId(), member.getName());
+        }
     }
 }
